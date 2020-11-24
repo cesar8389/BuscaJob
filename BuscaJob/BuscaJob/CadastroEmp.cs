@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace BuscaJob
 {
-    public partial class Form1 : Form
+    public partial class CadastroEmp : Form
     {
-        public Form1()
+        public CadastroEmp()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -32,12 +22,7 @@ namespace BuscaJob
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }
