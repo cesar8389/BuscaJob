@@ -8,7 +8,7 @@ namespace BuscaJob.Model
 {
     class Candidato
     {
-        private string id;
+        private int id;
         private string nome;
         private string email;
         private string cpf;
@@ -16,7 +16,7 @@ namespace BuscaJob.Model
         private string nacionalidade;
         private string idEndereco;
 
-        public string Id { get => id; set => id = value; }
+        public int Id { get => id; set => id = value; }
         public string Nome { get => nome; set => nome = value; }
         public string Email { get => email; set => email = value; }
         public string Cpf { get => cpf; set => cpf = value; }
