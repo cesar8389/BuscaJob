@@ -1,6 +1,6 @@
 ﻿namespace BuscaJob
 {
-    partial class CadastroEmp
+    partial class frmCadastroEmp
     {
         /// <summary>
         /// Required designer variable.
@@ -208,7 +208,7 @@
             this.label10.Text = "---------------------------------------------------------------------------------" +
     "--------------------------------------------";
             // 
-            // CadastroEmp
+            // frmCadastroEmp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -231,7 +231,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "CadastroEmp";
+            this.Name = "frmCadastroEmp";
             this.Text = "CadastroEmp";
             this.ResumeLayout(false);
             this.PerformLayout();

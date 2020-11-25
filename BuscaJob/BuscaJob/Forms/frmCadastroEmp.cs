@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BuscaJob
 {
-    public partial class CadastroEmp : Form
+    public partial class frmCadastroEmp : Form
     {
-        public CadastroEmp()
+        public frmCadastroEmp()
         {
             InitializeComponent();
         }

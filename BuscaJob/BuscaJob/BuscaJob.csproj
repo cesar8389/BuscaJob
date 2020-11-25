@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroCandi.cs">
+    <Compile Include="Forms\frmCadastroCandi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastroCandi.Designer.cs">
-      <DependentUpon>CadastroCandi.cs</DependentUpon>
+    <Compile Include="Forms\frmCadastroCandi.Designer.cs">
+      <DependentUpon>frmCadastroCandi.cs</DependentUpon>
     </Compile>
-    <Compile Include="CadastroEmp.cs">
+    <Compile Include="Forms\frmCadastroEmp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastroEmp.Designer.cs">
-      <DependentUpon>CadastroEmp.cs</DependentUpon>
+    <Compile Include="Forms\frmCadastroEmp.Designer.cs">
+      <DependentUpon>frmCadastroEmp.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -69,11 +69,11 @@
     <Compile Include="Model\Endereco.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CadastroCandi.resx">
-      <DependentUpon>CadastroCandi.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmCadastroCandi.resx">
+      <DependentUpon>frmCadastroCandi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadastroEmp.resx">
-      <DependentUpon>CadastroEmp.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmCadastroEmp.resx">
+      <DependentUpon>frmCadastroEmp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -100,8 +100,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
