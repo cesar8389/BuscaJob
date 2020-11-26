@@ -1,0 +1,32 @@
+Database: dbbuscajob
+
+-----tabela empresa
+CREATE TABLE `empresa` (
+  `id` int(12) PRIMARY KEY AUTO_INCREMENT,
+  `nome` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `cnpj` int(14) NOT NULL,
+  `emailContato` varchar(50),
+  `endereco` varchar(40) NOT NULL,
+  `complemento` varchar(20),
+  `bairro` varchar(20) NOT NULL,
+  `cidade` varchar(58) NOT NULL,
+  `uf` varchar(2) NOT NULL,
+  `cep` int(8) NOT NULL
+)
+-----tabela candidato
+CREATE TABLE `candidato` (
+  `id` int(15) PRIMARY KEY AUTO_INCREMENT,
+  `nome` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `cpf` int(11) NOT NULL,
+  `dtNascimento` int(8) NOT NULL,
+  `nacionalidade` varchar(20) NOT NULL,
+  `endereco` varchar(40) NOT NULL,
+  `complemento` varchar(20),
+  `bairro` varchar(20) NOT NULL,
+  `cidade` varchar(58) NOT NULL,
+  `uf` varchar(2) NOT NULL,
+  `cep` int(8) NOT NULL
+)
+
