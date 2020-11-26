@@ -38,7 +38,7 @@ namespace BuscaJob.Model
 
         public void AdicionarCandidato() {
             candidatoDao = new DAO.CandidatoDao();
-            candidatoDao.AdicionarCandidato(Id, Nome, Email, Cpf, DtNascimento, Nacionalidade, Endereco, Complemento, Bairro, Cidade, UF, Cep);
+            candidatoDao.AdicionarCandidato(Nome, Email, Cpf, DtNascimento, Nacionalidade, Endereco, Complemento, Bairro, Cidade, UF, Cep);
         }
         public void EditarCandidato() {
             candidatoDao = new DAO.CandidatoDao();

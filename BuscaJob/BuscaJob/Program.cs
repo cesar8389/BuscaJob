@@ -16,7 +16,7 @@ namespace BuscaJob
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCadastroCandi());
+            Application.Run(new Forms.frmLogin());
         }
     }
 }

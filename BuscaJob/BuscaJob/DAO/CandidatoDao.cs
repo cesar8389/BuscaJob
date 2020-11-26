@@ -14,19 +14,18 @@ namespace BuscaJob.DAO
         private MySqlConnection con;
         private Conexao.Conexao conexao;
 
-        public void AdicionarCandidato(int id, string nome, string email, string cpf, string dtNascimento, string nacionalidade, string endereco, string complemento, string bairro, string cidade, string uf, string cep) {
+        public void AdicionarCandidato(string nome, string email, string cpf, string dtNascimento, string nacionalidade, string endereco, string complemento, string bairro, string cidade, string uf, string cep) {
             con = new MySqlConnection();
             candidato = new Model.Candidato();
             conexao = new Conexao.Conexao();
             con.ConnectionString = conexao.getConnecttionString();
 
-            String query = "INSERT INTO candidato (id, nome, email, cpf, dtNascimento, nacionalidade, endereco, complemento, bairro, cidade, uf, cep) VALUES (?id, ?nome, ?email, ?cpf, ?dtNascimento, ?nacionalidade, ?endereco, ?complemento, ?bairro, ?cidade, ?uf, ?cep)";
+            String query = "INSERT INTO candidato (nome, email, cpf, dtNascimento, nacionalidade, endereco, complemento, bairro, cidade, uf, cep) VALUES (?nome, ?email, ?cpf, ?dtNascimento, ?nacionalidade, ?endereco, ?complemento, ?bairro, ?cidade, ?uf, ?cep)";
 
             try
             {
                 con.Open();
-                MySqlCommand cmd = new MySqlCommand(query, con);
-                cmd.Parameters.AddWithValue("?id", id);
+                MySqlCommand cmd = new MySqlCommand(query, con);              
                 cmd.Parameters.AddWithValue("?nome", nome);
                 cmd.Parameters.AddWithValue("?email", email);
                 cmd.Parameters.AddWithValue("?cpf", cpf);

@@ -18,35 +18,11 @@ namespace BuscaJob
         private Model.Candidato candidato;
         private DAO.CandidatoDao candidatoDao;
 
-        public frmCadastroCandi()
+        public frmCadastroCandi(bool aNovo)
         {
             InitializeComponent();
+            novo = aNovo;
         }
-        /*public void getNacionalidade()
-        {
-            conexao = new Conexao.Conexao();
-            string connectionString = conexao.getConnecttionString();
-            string query = "CALL getNacionalidade()";
-
-            using (MySqlConnection con = new MySqlConnection(connectionString))
-            {
-                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, con))
-                {
-                    try
-                    {
-                        DataTable datatable = new DataTable();
-                        adapter.Fill(datatable);
-                        cbNacionalidade.Items.AddRange(new object[] {datatable});
-                        //cbNacionalidade.DataSource = datatable;
-                        cbNacionalidade.Update();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Erro: " + ex, "Erɹo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-        }*/
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -55,15 +31,8 @@ namespace BuscaJob
             MessageBox.Show(Convert.ToString(formata.RetiraPontos(cbNacionalidade.Text)));
         }
 
-        private void frmCadastroCandi_Load(object sender, EventArgs e)
-        {
-            //getNacionalidade();
-
-        }
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            novo = true;
             if (novo == true)
             {
                 try
@@ -126,6 +95,8 @@ namespace BuscaJob
         {
             this.Close();
         }
+
+
     }
 }
 

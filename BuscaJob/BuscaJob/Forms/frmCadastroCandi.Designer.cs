@@ -565,7 +565,6 @@
             this.Controls.Add(this.label1);
             this.Name = "frmCadastroCandi";
             this.Text = "Cadastro";
-            this.Load += new System.EventHandler(this.frmCadastroCandi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
