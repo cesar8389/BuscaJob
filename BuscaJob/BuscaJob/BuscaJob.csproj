@@ -93,6 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao\Conexao.cs" />
+    <Compile Include="DAO\CandidatoDao.cs" />
+    <Compile Include="DAO\EmpresaDao.cs" />
+    <Compile Include="DAO\FormataDados.cs" />
     <Compile Include="Forms\frmCadastroCandi.cs">
       <SubType>Form</SubType>
     </Compile>
