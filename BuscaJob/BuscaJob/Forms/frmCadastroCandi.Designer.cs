@@ -46,7 +46,7 @@
             this.txbNascimento = new System.Windows.Forms.MaskedTextBox();
             this.txbCpf = new System.Windows.Forms.MaskedTextBox();
             this.txbUf = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
+            this.txbCep = new System.Windows.Forms.MaskedTextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.cbNacionalidade = new System.Windows.Forms.ComboBox();
             this.txbComplemento = new System.Windows.Forms.TextBox();
@@ -54,8 +54,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.lblId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txbCidade
@@ -64,7 +63,7 @@
             this.txbCidade.MaxLength = 58;
             this.txbCidade.Name = "txbCidade";
             this.txbCidade.Size = new System.Drawing.Size(182, 20);
-            this.txbCidade.TabIndex = 36;
+            this.txbCidade.TabIndex = 9;
             // 
             // txbBairro
             // 
@@ -72,7 +71,7 @@
             this.txbBairro.MaxLength = 20;
             this.txbBairro.Name = "txbBairro";
             this.txbBairro.Size = new System.Drawing.Size(214, 20);
-            this.txbBairro.TabIndex = 35;
+            this.txbBairro.TabIndex = 8;
             // 
             // txbEndereco
             // 
@@ -80,7 +79,7 @@
             this.txbEndereco.MaxLength = 40;
             this.txbEndereco.Name = "txbEndereco";
             this.txbEndereco.Size = new System.Drawing.Size(415, 20);
-            this.txbEndereco.TabIndex = 34;
+            this.txbEndereco.TabIndex = 6;
             // 
             // label9
             // 
@@ -128,7 +127,7 @@
             this.txbEmail.MaxLength = 50;
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(275, 20);
-            this.txbEmail.TabIndex = 28;
+            this.txbEmail.TabIndex = 3;
             // 
             // txbNome
             // 
@@ -136,7 +135,8 @@
             this.txbNome.MaxLength = 50;
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(415, 20);
-            this.txbNome.TabIndex = 26;
+            this.txbNome.TabIndex = 1;
+            this.txbNome.TextChanged += new System.EventHandler(this.txbNome_TextChanged);
             // 
             // label4
             // 
@@ -186,6 +186,7 @@
             this.btnSalvar.TabIndex = 40;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label11
             // 
@@ -203,7 +204,7 @@
             this.txbNascimento.Mask = "00/00/0000";
             this.txbNascimento.Name = "txbNascimento";
             this.txbNascimento.Size = new System.Drawing.Size(80, 20);
-            this.txbNascimento.TabIndex = 42;
+            this.txbNascimento.TabIndex = 4;
             // 
             // txbCpf
             // 
@@ -211,7 +212,7 @@
             this.txbCpf.Mask = "000.000.000-00";
             this.txbCpf.Name = "txbCpf";
             this.txbCpf.Size = new System.Drawing.Size(91, 20);
-            this.txbCpf.TabIndex = 43;
+            this.txbCpf.TabIndex = 2;
             // 
             // txbUf
             // 
@@ -219,15 +220,15 @@
             this.txbUf.Mask = "AA";
             this.txbUf.Name = "txbUf";
             this.txbUf.Size = new System.Drawing.Size(28, 20);
-            this.txbUf.TabIndex = 44;
+            this.txbUf.TabIndex = 10;
             // 
-            // maskedTextBox4
+            // txbCep
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(90, 124);
-            this.maskedTextBox4.Mask = "00.000-000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(66, 20);
-            this.maskedTextBox4.TabIndex = 45;
+            this.txbCep.Location = new System.Drawing.Point(90, 124);
+            this.txbCep.Mask = "00.000-000";
+            this.txbCep.Name = "txbCep";
+            this.txbCep.Size = new System.Drawing.Size(66, 20);
+            this.txbCep.TabIndex = 11;
             // 
             // label12
             // 
@@ -243,10 +244,236 @@
             // 
             this.cbNacionalidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNacionalidade.FormattingEnabled = true;
+            this.cbNacionalidade.Items.AddRange(new object[] {
+            "",
+            "brasileiro(a)",
+            "afegã(o)",
+            "albanês(esa)",
+            "alemã(ão)",
+            "andorrano(a)",
+            "angolano(a)",
+            "anguilano(a)",
+            "antiguano(a)",
+            "antilhano(a)",
+            "árabe-saudita",
+            "argelino(a)",
+            "argentino(a)",
+            "arménio(a)",
+            "arubano(a)",
+            "australiano(a)",
+            "austríaco(a)",
+            "azeri",
+            "baamiano(a)",
+            "bangladechiano(a)",
+            "barbadense",
+            "barenita",
+            "belga",
+            "belizenho(a)",
+            "benineseo(a)",
+            "bermudense",
+            "bielorrusso(a)",
+            "birmanês(a)",
+            "boliviano(a)",
+            "bósnio(a)",
+            "botsuano(a)",
+            "britânico(a)",
+            "bruneíno(a)",
+            "búlgaro(a)",
+            "burquino(a)",
+            "burundiano(a)",
+            "butanês(esa)",
+            "cabo-verdiano(a)",
+            "caimanês(a)",
+            "camaronês(esa)",
+            "cambojano(a)",
+            "canadiano(a)",
+            "catariano(a)",
+            "cazaque",
+            "centro-africano(a)",
+            "chadiano(a)",
+            "chileno(a)",
+            "chinês(esa)",
+            "cingalês(a)",
+            "cipriota",
+            "colombiano(a)",
+            "comoriano(a)",
+            "congolês(a)",
+            "congolês(a)",
+            "cookense",
+            "costarriquenho(a)",
+            "croata",
+            "cubano(a)",
+            "curaçauense",
+            "dinamarquês(esa)",
+            "dominicano(a)",
+            "dominiquês(esa)",
+            "egípcio(a)",
+            "emiradense",
+            "equatoriano(a)",
+            "eritreu(ia)",
+            "escocês(esa)",
+            "eslovaco(a)",
+            "esloveno(a)",
+            "espanhol(a)",
+            "essuatiniano(a)",
+            "estónio(a)",
+            "etíope",
+            "faroense",
+            "fijiano(a)",
+            "filipino",
+            "finlandês(esa)",
+            "francês(esa)",
+            "gabonês(a)",
+            "galês(esa)",
+            "gambiano(a)",
+            "ganês(a)",
+            "georgiano(a)",
+            "granadino(a)",
+            "grego(a)",
+            "guadalupense",
+            "guamês(a)",
+            "guatemalteco(a)",
+            "guianense",
+            "guianês(esa)",
+            "guineano(a)",
+            "guineense",
+            "guinéu-equatoriano(a)",
+            "haitiano(a)",
+            "honconguês(esa)",
+            "hondurenho(a)",
+            "húngaro(a)",
+            "iemenita",
+            "indiano(a)",
+            "indonésia(o)",
+            "inglês(esa)",
+            "iraniano(a)",
+            "iraquiano(a)",
+            "irlandês(a)",
+            "islandês(esa)",
+            "israelense",
+            "italiano(a)",
+            "jamaicano(a)",
+            "japonês(esa)",
+            "jibutiano(a)",
+            "jordano(a)",
+            "kosovar",
+            "kuwaitiano(a)",
+            "laociano(a)",
+            "lesotiano(a)",
+            "letã(o)",
+            "libanês(a)",
+            "liberiano(a)",
+            "líbio(a)",
+            "listenstainiano(a)",
+            "lituano(a)",
+            "luxemburguês(a)",
+            "macaense",
+            "macedónico(a)",
+            "malaio(a)",
+            "malauiano(a)",
+            "maldivo(a)",
+            "malgaxe",
+            "maliano",
+            "maltês(a)",
+            "marfinense",
+            "marroquino(a)",
+            "martinicano(a)",
+            "mauriciano(a)",
+            "mauritano(a)",
+            "mexicano(a)",
+            "micronésio(a)",
+            "moçambicano(a)",
+            "moldavo(a)",
+            "monegasco(a)",
+            "mongol",
+            "monserratense",
+            "montenegrino(a)",
+            "namibiano(a)",
+            "nauruano(a)",
+            "neerlandês(a)",
+            "neocaledónio(a)",
+            "neozelandês(esa)",
+            "nepalês(a)",
+            "nicaraguense",
+            "nigeriano(a)",
+            "nigerino(a)",
+            "norte-americano(a)",
+            "norte-coreano(a)",
+            "norte-irlandês(esa)",
+            "norueguês(esa)",
+            "omanense",
+            "palauano(a)",
+            "palestiniano(a)",
+            "panamenho(a)",
+            "papua",
+            "paquistanês(a)",
+            "paraguaio(a)",
+            "peruano(a)",
+            "polaco(a)",
+            "polinésio(a)",
+            "porto-riquenho(a)",
+            "português(a)",
+            "queniano(a)",
+            "quirguiz",
+            "quiribatiano(a)",
+            "romeno(a)",
+            "ruandês(a)",
+            "russo(a)",
+            "salomonense",
+            "salvadorenho(a)",
+            "samoano(a)",
+            "samoense",
+            "santa-luciense",
+            "são-cristovense",
+            "são-marinhense",
+            "são-martinhense",
+            "são-martinhense",
+            "são-tomense",
+            "são-vicentino(a)",
+            "seichelense",
+            "senegalês(esa)",
+            "serra-leonês(a)",
+            "sérvio(a)",
+            "singapurense",
+            "sírio(a)",
+            "somali",
+            "sudanês(a)",
+            "sueco(a)",
+            "suíço(a)",
+            "sul-africano(a)",
+            "sul-coreano(a)",
+            "surinamês(a)",
+            "tailandês",
+            "taiwanês(a)",
+            "taiwanês(a)",
+            "tajique",
+            "tanzaniano(a)",
+            "tcheco(a)",
+            "timorense",
+            "togolês(a)",
+            "tonganês(esa)",
+            "trinitário(a)-tobagense",
+            "tunisino(a)",
+            "turco(a)",
+            "turquemeno(a)",
+            "turquense",
+            "tuvaluano(a)",
+            "ucraniano(a)",
+            "ugandense",
+            "uruguaio(a)",
+            "usbeque",
+            "vanuatuense",
+            "vaticano(a)",
+            "venezuelano(a)",
+            "vietnamita",
+            "virginense",
+            "virginense",
+            "zambiano(a)",
+            "zimbabuano(a)"});
             this.cbNacionalidade.Location = new System.Drawing.Point(660, 45);
             this.cbNacionalidade.Name = "cbNacionalidade";
             this.cbNacionalidade.Size = new System.Drawing.Size(121, 21);
-            this.cbNacionalidade.TabIndex = 47;
+            this.cbNacionalidade.TabIndex = 5;
             // 
             // txbComplemento
             // 
@@ -254,7 +481,7 @@
             this.txbComplemento.MaxLength = 20;
             this.txbComplemento.Name = "txbComplemento";
             this.txbComplemento.Size = new System.Drawing.Size(173, 20);
-            this.txbComplemento.TabIndex = 49;
+            this.txbComplemento.TabIndex = 7;
             // 
             // label13
             // 
@@ -283,6 +510,7 @@
             this.btnSair.TabIndex = 51;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnExcluir
             // 
@@ -293,33 +521,22 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // lblId
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(673, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(157, 15);
-            this.label5.TabIndex = 53;
-            this.label5.Text = "ID (apenas para testes)";
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(355, 158);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 54;
-            this.button5.Text = "testes";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(673, 9);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(157, 15);
+            this.lblId.TabIndex = 53;
+            this.lblId.Text = "ID (apenas para testes)";
             // 
             // frmCadastroCandi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(786, 194);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEditar);
@@ -327,7 +544,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.cbNacionalidade);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.maskedTextBox4);
+            this.Controls.Add(this.txbCep);
             this.Controls.Add(this.txbUf);
             this.Controls.Add(this.txbCpf);
             this.Controls.Add(this.txbNascimento);
@@ -373,7 +590,7 @@
         private System.Windows.Forms.MaskedTextBox txbNascimento;
         private System.Windows.Forms.MaskedTextBox txbCpf;
         private System.Windows.Forms.MaskedTextBox txbUf;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.MaskedTextBox txbCep;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbNacionalidade;
         private System.Windows.Forms.TextBox txbComplemento;
@@ -381,7 +598,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label lblId;
     }
 }

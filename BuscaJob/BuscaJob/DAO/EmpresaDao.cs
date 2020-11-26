@@ -50,7 +50,7 @@ namespace BuscaJob.DAO
                 con.Close();
             }
         }
-        public void EditarEmpresa(int id, string nome, string email, int cnpj, int emailContato, string endereco, string complemento, string bairro, string cidade, string uf, int cep)
+        public void EditarEmpresa(int id, string nome, string email, string cnpj, string emailContato, string endereco, string complemento, string bairro, string cidade, string uf, string cep)
         {
             con = new MySqlConnection();
             empresa = new Model.Empresa();

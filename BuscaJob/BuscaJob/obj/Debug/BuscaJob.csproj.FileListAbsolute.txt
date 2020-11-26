@@ -35,3 +35,4 @@ C:\Git\BuscaJob\BuscaJob\BuscaJob\BuscaJob\obj\Debug\BuscaJob.csproj.CoreCompile
 C:\Git\BuscaJob\BuscaJob\BuscaJob\BuscaJob\obj\Debug\BuscaJob.csproj.CopyComplete
 C:\Git\BuscaJob\BuscaJob\BuscaJob\BuscaJob\obj\Debug\BuscaJob.exe
 C:\Git\BuscaJob\BuscaJob\BuscaJob\BuscaJob\obj\Debug\BuscaJob.pdb
+C:\Git\BuscaJob\BuscaJob\BuscaJob\BuscaJob\obj\Debug\BuscaJob.Forms.frmLogin.resources

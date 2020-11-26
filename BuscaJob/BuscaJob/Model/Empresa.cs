@@ -8,6 +8,7 @@ namespace BuscaJob.Model
 {
     class Empresa
     {
+        private DAO.EmpresaDao empresaDao;
         private int id;
         private string nome;
         private string email;
@@ -31,5 +32,21 @@ namespace BuscaJob.Model
         public string Cidade { get => cidade; set => cidade = value; }
         public string UF { get => uf; set => uf = value; }
         public string Cep { get => cep; set => cep = value; }
+
+        public void AdicionarEmpresa()
+        {
+            empresaDao = new DAO.EmpresaDao();
+            empresaDao.AdicionarEmpresa(Id, Nome, Email, Cnpj, EmailContato, Endereco, Complemento, Bairro, Cidade, UF, Cep);
+        }
+        public void EditarEmpresa()
+        {
+            empresaDao = new DAO.EmpresaDao();
+            empresaDao.EditarEmpresa(Id, Nome, Email, Cnpj, EmailContato, Endereco, Complemento, Bairro, Cidade, UF, Cep);
+        }
+        public void ExcluirEmpresa()
+        {
+            empresaDao = new DAO.EmpresaDao();
+            empresaDao.ExcluirEmpresa(Id);
+        }
     }
 }

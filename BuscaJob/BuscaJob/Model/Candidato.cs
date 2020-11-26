@@ -8,6 +8,7 @@ namespace BuscaJob.Model
 {
     class Candidato
     {
+        private DAO.CandidatoDao candidatoDao;
         private int id;
         private string nome;
         private string email;
@@ -34,5 +35,18 @@ namespace BuscaJob.Model
         public string Cidade { get => cidade; set => cidade = value; }
         public string UF { get => uf; set => uf = value; }
         public string Cep { get => cep; set => cep = value; }
+
+        public void AdicionarCandidato() {
+            candidatoDao = new DAO.CandidatoDao();
+            candidatoDao.AdicionarCandidato(Id, Nome, Email, Cpf, DtNascimento, Nacionalidade, Endereco, Complemento, Bairro, Cidade, UF, Cep);
+        }
+        public void EditarCandidato() {
+            candidatoDao = new DAO.CandidatoDao();
+            candidatoDao.EditarCandidato(Id, Nome, Email, Cpf, DtNascimento, Nacionalidade, Endereco, Complemento, Bairro, Cidade, UF, Cep);
+        }
+        public void ExcluirCandidato() {
+            candidatoDao = new DAO.CandidatoDao();
+            candidatoDao.ExcluirCandidato(Id);
+        }
     }
 }
